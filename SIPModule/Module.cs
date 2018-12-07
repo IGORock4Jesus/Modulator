@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace SIPModule
 {
@@ -13,11 +15,12 @@ namespace SIPModule
 
 		public string Description => "Позволяет совершать званки из приложения.";
 
-		public string IconPath => @"C:\Users\IGORo\Downloads\phone.png";
+		public string IconPath => @"C:\Users\igoro\Downloads\IMG_20180710_200729.jpg";
 
 		public List<ICallback> Callbacks => new List<ICallback> {
 			new Callbacks.OpenClientCallback(),
 			new Callbacks.QuickCallCallback()
 		};
+
 	}
 }

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace MapsModule.Callbacks
 {
@@ -19,5 +21,7 @@ namespace MapsModule.Callbacks
 			else
 				MessageBox.Show("Операция отменена");
 		};
+
+		public string IconPath => @"C:\Users\igoro\Downloads\add.png";
 	}
 }

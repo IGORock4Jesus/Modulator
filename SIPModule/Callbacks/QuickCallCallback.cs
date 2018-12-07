@@ -13,5 +13,7 @@ namespace SIPModule.Callbacks
 		public string Name => "Быстрый вызов";
 
 		public Action Action => () => MessageBox.Show("Производится звонок в службу спасения");
+
+		public string IconPath => null;
 	}
 }

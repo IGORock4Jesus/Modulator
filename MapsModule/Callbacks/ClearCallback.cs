@@ -13,5 +13,7 @@ namespace MapsModule.Callbacks
 		public string Name => "Очистить карту";
 
 		public Action Action => () => MessageBox.Show("Карта очищена");
+
+		public string IconPath => null;
 	}
 }

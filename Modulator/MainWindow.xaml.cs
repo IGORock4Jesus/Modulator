@@ -67,12 +67,6 @@ namespace Modulator
 		{
 			view.Modules.Clear();
 			LoadModules();
-			LoadModules();
-
-			foreach (var path in view.Modules.Select(w=>w.IconPath))
-			{
-				Debug.WriteLine($"Down test = {path}");
-			}
 		}
 
 		private void LoadModules()
@@ -102,12 +96,13 @@ namespace Modulator
 					{
 						Name = obj.Name,
 						Description = obj.Description,
-						IconPath = obj.IconPath,
+						Icon = new Image { Source = new BitmapImage(new Uri(obj.IconPath ?? @"C:\Users\igoro\Downloads\metal_bare_2313_2844_Small.jpg")) },
 						Module = obj,
 						Callbacks = new ObservableCollection<CallbackView>(obj.Callbacks.Select(w => new CallbackView
 						{
 							Name = w.Name,
-							Callback = w
+							Callback = w,
+							Icon = new Image { Source = new BitmapImage(new Uri(w.IconPath ?? @"C:\Users\igoro\Downloads\metal_bare_2313_2844_Small.jpg")) }
 						}))
 					});
 				}

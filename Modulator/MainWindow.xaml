@@ -19,17 +19,34 @@
 				<MenuItem.ItemContainerStyle>
 					<Style TargetType="MenuItem">
 						<Setter Property="Header" Value="{Binding Path=Name}"/>
-						<Setter Property="Icon">
+						<!--<Setter Property="Icon">
 							<Setter.Value>
 								<Image Source="{Binding Path=IconPath}"/>
+								--><!--<Image>
+									<Image.Source>
+										<BitmapImage UriSource="{Binding Path=IconPath}"/>										
+									</Image.Source>
+								</Image>--><!--
 							</Setter.Value>
-						</Setter>
+						</Setter>-->
+						<Setter Property="Icon" Value="{Binding Path=Icon}"/>
 						<Setter Property="ItemsSource" Value="{Binding Path=Callbacks}"/>
 						<Setter Property="ItemContainerStyle">
 							<Setter.Value>
 								<Style TargetType="MenuItem">
 									<Setter Property="Header" Value="{Binding Path=Name}"/>
 									<EventSetter Event="Click" Handler="CallbackMenu_Click"/>
+									<!--<Setter Property="Icon">
+										<Setter.Value>
+											<Image Source="{Binding Path=IconPath}"/>
+											--><!--<Image>
+												<Image.Source>
+													<BitmapImage UriSource="{Binding Path=IconPath}"/>
+												</Image.Source>
+											</Image>--><!--
+										</Setter.Value>
+									</Setter>-->
+									<Setter Property="Icon" Value="{Binding Path=Icon}"/>
 								</Style>
 							</Setter.Value>
 						</Setter>

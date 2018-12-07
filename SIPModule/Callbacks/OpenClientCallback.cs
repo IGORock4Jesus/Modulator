@@ -13,5 +13,7 @@ namespace SIPModule.Callbacks
 		public string Name => "Открыть клиента";
 
 		public Action Action => () => MessageBox.Show("Клиент - телефон");
+
+		public string IconPath => null;
 	}
 }

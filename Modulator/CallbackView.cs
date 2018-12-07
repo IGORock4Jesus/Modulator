@@ -1,4 +1,6 @@
-﻿namespace Modulator
+﻿using System.Windows.Controls;
+
+namespace Modulator
 {
 	internal class CallbackView : BaseView
 	{
@@ -29,6 +31,34 @@
 				}
 			}
 		}
+
+		Image icon;
+		public Image Icon
+		{
+			get => icon;
+			set
+			{
+				if (icon != value)
+				{
+					icon = value;
+					RaisePropertyChanged(nameof(Icon));
+				}
+			}
+		}
+
+		//string iconPath;
+		//public string IconPath
+		//{
+		//	get => iconPath;
+		//	set
+		//	{
+		//		if (iconPath != value)
+		//		{
+		//			iconPath = value;
+		//			RaisePropertyChanged(nameof(IconPath));
+		//		}
+		//	}
+		//}
 
 	}
 }

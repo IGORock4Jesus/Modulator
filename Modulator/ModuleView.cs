@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace Modulator
 {
@@ -38,19 +39,19 @@ namespace Modulator
 			}
 		}
 
-		string iconPath;
-		public string IconPath
-		{
-			get => iconPath;
-			set
-			{
-				if (iconPath != value)
-				{
-					iconPath = value;
-					RaisePropertyChanged(nameof(IconPath));
-				}
-			}
-		}
+		//string iconPath;
+		//public string IconPath
+		//{
+		//	get => iconPath;
+		//	set
+		//	{
+		//		if (iconPath != value)
+		//		{
+		//			iconPath = value;
+		//			RaisePropertyChanged(nameof(IconPath));
+		//		}
+		//	}
+		//}
 
 
 		ObservableCollection<CallbackView> callbacks=new ObservableCollection<CallbackView>();
@@ -77,6 +78,20 @@ namespace Modulator
 				{
 					module = value;
 					RaisePropertyChanged(nameof(Module));
+				}
+			}
+		}
+
+		Image icon;
+		public Image Icon
+		{
+			get => icon;
+			set
+			{
+				if (icon != value)
+				{
+					icon = value;
+					RaisePropertyChanged(nameof(Icon));
 				}
 			}
 		}
